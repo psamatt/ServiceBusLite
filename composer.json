@@ -1,0 +1,28 @@
+{
+    "name": "psamatt/service-bus-lite",
+    "version": "1.0",
+    "type": "Service Bus",
+    "description": "Service Bus for PHP",
+    "keywords": ["servicebus", "nservicebus", "shortbus", "esb", "messaging"],
+    "homepage": "http://github.com/psamatt/ServiceBusLite",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matt Goodwin",
+            "email": "matt.goodwin491@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "ServiceBus": "lib/" }
+    },
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~3"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "dev"
+}
