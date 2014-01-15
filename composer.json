@@ -1,7 +1,7 @@
 {
     "name": "psamatt/service-bus-lite",
     "version": "1.0",
-    "type": "Service Bus",
+    "type": "library",
     "description": "Service Bus for PHP",
     "keywords": ["servicebus", "nservicebus", "shortbus", "esb", "messaging"],
     "homepage": "http://github.com/psamatt/ServiceBusLite",
