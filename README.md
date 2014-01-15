@@ -27,8 +27,8 @@ Using [Composer](http://getcomposer.org/doc/00-intro.md), add the following into
 
 Now tell composer to download the bundle by running the following command:
 
-` $ php composer.phar update psamatt/yaml-export-bundle`
+` $ php composer.phar update psamatt/service-bus-lite`
 
 ### Examples
 
-To find how to use this library, check the [examples](https://github.com/psamatt/ServiceBusLite/example).
+To find how to use this library, check the [examples](https://github.com/psamatt/ServiceBusLite/tree/master/example).
