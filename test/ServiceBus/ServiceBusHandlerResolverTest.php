@@ -10,7 +10,7 @@ class ServiceBusHandlerResolverTest extends \PHPUnit_Framework_TestCase
     {
         $handlerResolver = $this->getHandlerResolver();
         
-        $barCommand = $this->getMock('ServiceBus\ICommand', [], [], 'BarCommand');
+        $barCommand = $this->getMock('ServiceBus\ICommand', array(), array(), 'BarCommand');
         
         $barCommandHandler = $handlerResolver->resolve($barCommand);
         
@@ -24,7 +24,7 @@ class ServiceBusHandlerResolverTest extends \PHPUnit_Framework_TestCase
     {
         $handlerResolver = $this->getHandlerResolver();
         
-        $notRegisteredCommand = $this->getMock('ServiceBus\ICommand', [], [], 'NotRegisteredCommand');
+        $notRegisteredCommand = $this->getMock('ServiceBus\ICommand', array(), array(), 'NotRegisteredCommand');
         
         $handlerResolver->resolve($notRegisteredCommand);
     }
@@ -36,7 +36,7 @@ class ServiceBusHandlerResolverTest extends \PHPUnit_Framework_TestCase
     {
         $handlerResolver = $this->getHandlerResolver(true, false);
         
-        $barQuery = $this->getMock('ServiceBus\IQuery', [], [], 'BarQuery');
+        $barQuery = $this->getMock('ServiceBus\IQuery', array(), array(), 'BarQuery');
         
         $handlerResolver->resolve($barQuery);
     }
@@ -45,7 +45,7 @@ class ServiceBusHandlerResolverTest extends \PHPUnit_Framework_TestCase
     {
         $handlerResolver = $this->getHandlerResolver();
         
-        $barQuery = $this->getMock('ServiceBus\IQuery', [], [], 'BarQuery');
+        $barQuery = $this->getMock('ServiceBus\IQuery', array(), array(), 'BarQuery');
         
         $barQueryHandler = $handlerResolver->resolve($barQuery);
         
@@ -59,7 +59,7 @@ class ServiceBusHandlerResolverTest extends \PHPUnit_Framework_TestCase
     {
         $handlerResolver = $this->getHandlerResolver();
         
-        $notRegisteredQuery = $this->getMock('ServiceBus\IQuery', [], [], 'NotRegisteredQuery');
+        $notRegisteredQuery = $this->getMock('ServiceBus\IQuery', array(), array(), 'NotRegisteredQuery');
         
         $handlerResolver->resolve($notRegisteredQuery);
     }
@@ -74,13 +74,13 @@ class ServiceBusHandlerResolverTest extends \PHPUnit_Framework_TestCase
         $handlerResolver = new ServiceBusHandlerResolver;
 
         if (true === $addCommandHandlers) {
-            $handlerResolver->addCommandHandler($this->getMock('ServiceBus\ICommandHandler', [], [], 'FooCommandHandler'));
-            $handlerResolver->addCommandHandler($this->getMock('ServiceBus\ICommandHandler', [], [], 'BarCommandHandler'));
+            $handlerResolver->addCommandHandler($this->getMock('ServiceBus\ICommandHandler', array(), array(), 'FooCommandHandler'));
+            $handlerResolver->addCommandHandler($this->getMock('ServiceBus\ICommandHandler', array(), array(), 'BarCommandHandler'));
         }
         
         if (true === $addQueryHandlers) {
-            $handlerResolver->addQueryHandler($this->getMock('ServiceBus\IQueryHandler', [], [], 'FooQueryHandler'));
-            $handlerResolver->addQueryHandler($this->getMock('ServiceBus\IQueryHandler', [], [], 'BarQueryHandler'));
+            $handlerResolver->addQueryHandler($this->getMock('ServiceBus\IQueryHandler', array(), array(), 'FooQueryHandler'));
+            $handlerResolver->addQueryHandler($this->getMock('ServiceBus\IQueryHandler', array(), array(), 'BarQueryHandler'));
         }
         
         return $handlerResolver;
