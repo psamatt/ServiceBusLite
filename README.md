@@ -32,3 +32,11 @@ Now tell composer to download the bundle by running the following command:
 ### Examples
 
 To find how to use this library, check the [examples](https://github.com/psamatt/ServiceBusLite/tree/master/example).
+
+### Intergrated into...
+
+This library has been implemented into the following PHP Frameworks:
+
+- Symfony2 using [ServiceBusLiteBundle](https://github.com/psamatt/ServiceBusLiteBundle)
+
+If you have integrated this into an unlisted Framework, then get in touch.
