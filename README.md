@@ -27,7 +27,7 @@ Using [Composer](http://getcomposer.org/doc/00-intro.md), add the following into
 
 Now tell composer to download the bundle by running the following command:
 
-` $ php composer.phar update psamatt/service-bus-lite`
+`$ php composer.phar update psamatt/service-bus-lite`
 
 ### Examples
 
