@@ -16,7 +16,7 @@ Your Handler will do your logic dependant on the type of request:
 
 Using [Composer](http://getcomposer.org/doc/00-intro.md), add the following into your composer.json
 
-```js
+```json
 {
     "require": {
         psamatt/service-bus-lite": "dev-master"
