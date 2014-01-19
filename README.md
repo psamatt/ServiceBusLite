@@ -33,7 +33,7 @@ Now tell composer to download the bundle by running the following command:
 
 To find how to use this library, check the [examples](https://github.com/psamatt/ServiceBusLite/tree/master/example).
 
-### Intergrated into...
+### Integrated into...
 
 This library has been implemented into the following PHP Frameworks:
 
