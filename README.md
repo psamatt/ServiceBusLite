@@ -35,7 +35,7 @@ To find how to use this library, check the [examples](https://github.com/psamatt
 
 ### Integrated into...
 
-This library has been implemented into the following PHP Frameworks:
+This library has been integrated into the following PHP Frameworks:
 
 - Symfony2 using [ServiceBusLiteBundle](https://github.com/psamatt/ServiceBusLiteBundle)
 
