@@ -2,7 +2,7 @@
 
 namespace ServiceBus;
 
-class Mediator
+class Mediator implements IMediator
 {
     private $handlerResolver;
 
