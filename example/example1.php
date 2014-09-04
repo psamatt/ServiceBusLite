@@ -36,7 +36,7 @@ class RegisterUserEventCommandHandler implements \ServiceBus\ICommandHandler
     }
 }
 
-class RegisterUserEventCommand implements \ServiceBus\ICommand
+class RegisterUserEventCommand extends \ServiceBus\Command
 {
     public $userId;
     public $eventId;
@@ -64,7 +64,7 @@ class ShowEventsQueryHandler implements \ServiceBus\IQueryHandler
     }
 }
 
-class ShowEventsQuery implements \ServiceBus\IQuery
+class ShowEventsQuery extends \ServiceBus\Query
 {
     public $eventName;
 }
@@ -78,16 +78,11 @@ $mediator = new \ServiceBus\Mediator($serviceBusHandlerResolver);
 /**
  * Query Example
  */
-$showEventsQuery = new ShowEventsQuery;
-$showEventsQuery->eventName = 'PHP Conference UK';
-
+$showEventsQuery = new ShowEventsQuery(array('eventName' => 'PHP Conference UK'));
 $eventItems = $mediator->request($showEventsQuery);
 
 /**
  * Command Example
  */
-$registerUserOntoEventCommand = new RegisterUserEventCommand;
-$registerUserOntoEventCommand->userId = 1;
-$registerUserOntoEventCommand->eventId = 8;
-
+$registerUserOntoEventCommand = new RegisterUserEventCommand(['userId' => 1, 'eventId' => 8]);
 $mediator->send($registerUserOntoEventCommand);
